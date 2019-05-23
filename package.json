@@ -3,8 +3,10 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "postinstall": "lerna exec -- npm install --package-lock=false && lerna run prepare",
+    "xxxpostinstall": "lerna exec -- npm install --package-lock=false && lerna run prepare",
+    "postinstall": "lerna exec -- npm install --package-lock=false",
     "diff": "check-if-folder-contents-changed-in-git-commit-range",
+    "clean:build": "rm -rf packages/*/coverage/* packages/*/lib",
     "build": "lerna run build",
     "build:incremental": "tsc -b",
     "test": "jest --verbose",
